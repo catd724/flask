@@ -1,11 +1,11 @@
-from flask import Flask,url_for
+from flask import Flask,url_for,render_template
 from markupsafe import escape
-
 app = Flask(__name__)
 @app.route("/")
 def mainpage():
-    return f'''<h1> Home </h1>
-    <a href = "{url_for('home',name = 'kashif')}">kashif</a> '''
+    # return f'''<h1> Home </h1>
+    # <a href = "{url_for('home',name = 'kashif')}">kashif</a> '''
+    return render_template('home.html')
 
 
 
