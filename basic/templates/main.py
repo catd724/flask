@@ -11,11 +11,49 @@ def mainpage():
 @app.route("/name", methods=["POST","GET"])
 def namepage():
 
-    pname = request.form.get("pname","[No name entered!]")
-    page = request.form.get("page","[No age entered!]")
-    pemail = request.form.get("pemail","[No email entered!!]")
+    pname = request.form.get("pname")
+    page = request.form.get("page")
+    pemail = request.form.get("pemail")
 
     return render_template("name.html",pname=pname,page=page,pemail=pemail)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # @app.route("/post/<int:post_id>")

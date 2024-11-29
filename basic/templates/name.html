@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <p>
+        {% if pname %}
+        Your name is {{pname}}
+        {% else %}
+        Nothing entered in name
+        {% endif %}
+    </p>
+    <p>
+        {% if page %}
+        Your age is {{page}}
+        {% else %} 
+        Nothing entered in age
+        {% endif %}
+    </p>
+    <p> 
+        {% if pemail %}
+        Your email is {{pemail}}
+        {% else %}
+        Nothing entered in email
+        {% endif %}
+    
+    </p>
+    <a href="/">Go back to the home page</a>
+
+{% endblock %}
