@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <table>
+<tr>
+    <th>sno</th>
+    <th>name</th>
+    <th>email</th>
+</tr>
+{% for i in data %}
+<tr>
+    <th>{{i.sno}}</th>
+    <th>{{i.name}}</th>
+    <th>{{i.email}}</th>
+</tr>
+{% endfor %}
+
+    </table>
+
+
+    <form action="/add" method="post">
+        <label for="name">Enter your name:</label><br>
+        <input type="text" name="name" id="name" placeholder="Kousar"><br><br>
+        <label for="email">Enter your email</label><br>
+        <input type="email" name="email" id="email" placeholder="bilodon@gmail.com"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
