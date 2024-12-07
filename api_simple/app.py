@@ -1,8 +1,11 @@
 from flask import Flask, jsonify,request,render_template,redirect
 import requests
 
+
+API_KEY = "Bearer hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
 API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-large"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": API_KEY}
 payload = {
      "inputs":None
 }
